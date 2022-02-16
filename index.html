@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="./images/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+    #popup::after {
+      content: "";
+      position: absolute;
+      top: 99%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 10px;
+      border-style: solid;
+      border-color: hsl(217, 19%, 35%) transparent transparent transparent;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      #popup {
+        top: 26.5rem;
+        left: 68vw;
+      }
+    }
+
+    @media only screen and (min-width: 375px ) and (max-width: 1023px) {
+      #popup {
+        top: 37rem;
+        left: 50vw;
+      }
+    }
+
+  </style>
+
+  <title> Article Preview Component Hub </title>
+</head>
+<body style="font-family: 'Manrope', sans-serif; background-color: hsl(210, 46%, 95%);" class="">
+  <main class="flex justify-center items-center my-32 lg:my-52">
+    <div class="flex flex-col lg:flex-row w-11/12 lg:w-8/12 lg:h-96 bg-white rounded-xl">
+      <img src="./images/drawers.jpg" alt="card-image" class="object-fit object-cover lg:w-2/5 rounded-t-xl lg:rounded-l-xl shadow-xl" >
+      <div class="p-6 lg:p-10">
+        <h3 style="color: hsl(217, 19%, 35%);" class="text-lg lg:text-3xl font-extrabold mb-4"> Shift the overall look and feel by adding these wonderful touches to furniture in your home </h3>
+        <p style="color: hsl(214, 17%, 51%);" class="text-sm lg:text-lg font-semibold">  Ever been in a room and felt like something was missing? Perhaps 
+          it felt slightly bare and uninviting. I've got some simple tips 
+          to help you make any room feel complete. 
+        </p>
+        <div class="flex justify-between mt-10">
+          <div class="flex items-center gap-4 ">
+            <img src="./images/avatar-michelle.jpg" alt="hero-image" class="rounded-full w-10 lg:w-16" >
+            <div class="flex flex-col ">
+              <h3 style="color: hsl(217, 19%, 35%);" class="font-bold text-sm lg:text-lg"> Michelle Appleton </h3>
+              <p style="color: hsl(214, 17%, 51%);" class="text-xs lg:text-base font-semibold"> 28 Jun 2020 </p>
+            </div>
+          </div>
+          <button onclick="openPopup()" id="share-button" class="mr-9 lg:mr-4">
+            <img id="share-icon" src="./images/icon-share.svg" alt="share-icon" style="background-color: hsl(210, 46%, 95%); width: 2rem;" class="h-6 lg:h-8 p-2 relative top-1 rounded-full" >
+          </button>
+        </div>
+      </div>
+    </div>
+    <div id="popup" style="box-shadow: 0 5px 80px #888888; background-color: hsl(217, 19%, 35%); display: none;" class="flex items-center gap-3 lg:gap-6 absolute px-2 lg:px-4 py-1 lg:py-2 outline-none rounded-xl">
+      <p style="color: hsl(214, 17%, 51%);" class="tracking-widest text-sm lg:text-xl lg:font-bold mr-4 py-2 px-3"> SHARE </p>
+      <img src="./images/icon-facebook.svg" alt="facebook-icon" class="w-3 lg:w-6" >
+      <img src="./images/icon-twitter.svg" alt="twitter-icon" class="w-3 lg:w-6" >
+      <img src="./images/icon-pinterest.svg" alt="pintrest-icon" class="w-3 lg:w-6" >
+    </div>
+  </main>
+</body>
+<script src="./script.js"></script>
+</html>
